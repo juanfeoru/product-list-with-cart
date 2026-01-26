@@ -5,6 +5,5 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/product-list-with-cart/',
   plugins: [tailwindcss(), react(), svgr()],
 });
