@@ -1,4 +1,4 @@
-import carbonIcon from '../assets/icon-carbon-neutral.svg';
+import carbonIcon from '../assets/icons/icon-carbon-neutral.svg';
 
 export default function CartSummary({ total, onConfirmOrder }) {
   return (

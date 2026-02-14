@@ -1,4 +1,4 @@
-import removeIcon from '../assets/icon-remove-item.svg';
+import removeIcon from '../assets/icons/icon-remove-item.svg';
 
 export default function CartItem({ item, onRemoveItem }) {
   return (

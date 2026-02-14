@@ -1,4 +1,4 @@
-import emptyCart from '../../assets/illustration-empty-cart.svg';
+import emptyCart from '../../assets/icons/illustration-empty-cart.svg';
 
 export default function YourCartEmpty({ count }) {
   return (

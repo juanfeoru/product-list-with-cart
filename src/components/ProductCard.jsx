@@ -1,6 +1,11 @@
-import cartIcon from '../assets/icon-add-to-cart.svg';
-import plusIcon from '../assets/icon-increment-quantity.svg';
-import minusIcon from '../assets/icon-decrement-quantity.svg';
+import cartIcon from '../assets/icons/icon-add-to-cart.svg';
+import plusIcon from '../assets/icons/icon-increment-quantity.svg';
+import minusIcon from '../assets/icons/icon-decrement-quantity.svg';
+
+const images = import.meta.glob('../assets/images/*.jpg', {
+  eager: true,
+  import: 'default',
+});
 
 export default function ProductCard({
   product,
@@ -13,10 +18,10 @@ export default function ProductCard({
   return (
     <article className='relative'>
       <picture>
-        <source srcSet={image.desktop} media='(min-width: 1024px)' />
-        <source srcSet={image.tablet} media='(min-width: 768px)' />
+        <source srcSet={images[image.desktop]} media='(min-width: 1024px)' />
+        <source srcSet={images[image.tablet]} media='(min-width: 768px)' />
         <img
-          src={image.mobile}
+          src={images[image.mobile]}
           className={`rounded-lg object-cover md:size-55 lg:size-65
     ${cartItem ? 'border-2 border-red' : ''}
   `}
